@@ -5,11 +5,13 @@
 RHEL/centos/fedora
 
 yum install clang
+
 yum install llvm
 
 ubuntu
 
 apt-get install clang
+
 apt-get install llvm
 
 #compilation:-
