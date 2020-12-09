@@ -32,3 +32,22 @@ tc filter show dev eth0 ingress
 
 tc exec bpf dbg
 
+#To list maps
+
+bpftool -f map show
+
+#To update maps
+
+bpftool map update id <map id> key hex <key value in bytes> value hex <values in bytes>
+
+example :-
+
+bpftool map update id 1 key hex 00 00 00 00 value hex 10 00 00 00
+
+#To dump maps content
+
+bpftool map dump id <map id>
+
+#to figureout global ebpf fs mount
+
+tree /sys/fs/bpf/
